@@ -1,0 +1,24 @@
+Given an integer, , print the following values for each integer  from  to :
+
+Decimal
+Octal
+Hexadecimal (capitalized)
+Binary
+Function Description
+
+Complete the print_formatted function in the editor below.
+
+print_formatted has the following parameters:
+
+int number: the maximum value to print
+
+def print_formatted(number):
+    # your code goes here
+    wd=len(bin(number)[2:])
+    for i in range (1,number+1):
+        d=str(i).rjust(wd)
+        o=oct(i)[2:].rjust(wd)
+        hd=hex(i)[2:].rjust(wd).upper()
+        b=bin(i)[2:].rjust(wd)
+        print(d,o,hd,b)
+
